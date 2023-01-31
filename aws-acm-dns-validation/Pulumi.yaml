@@ -1,0 +1,3 @@
+name: aws-acm-dns-validation
+runtime: nodejs
+description: Worry-free AWS ACM certificate DNS validation
