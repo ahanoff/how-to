@@ -1,0 +1,17 @@
+{
+    "name": "@ahanoff/worry-free-aws-acm-dns-validation",
+    "main": "index.ts",
+    "contributors": [
+        {
+            "name": "Akhan Zhakiyanov",
+            "url": "https://github.com/ahanoff"
+        }
+    ],
+    "devDependencies": {
+        "@types/node": "^20"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.0.0",
+        "@pulumi/aws": "^6.0.0"
+    }
+}
