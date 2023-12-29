@@ -1,0 +1,1 @@
+This code example for https://ahanoff.dev/blog/aspnet8-minimal-api-lambda-container-image post
