@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "SMkGZvSR127zWHnf7CEQVAP3neFCeRBPGttPIRi7WdvLZCQCmBXJ0SGdHdWSpcA+nRfSGNjnsQZGO/Ww9tk5AA==",
+  "success": true,
+  "projectFilePath": "/Users/akhanqi/ahanoff/how-to/openiddict-aws-serverless/src/LambdaASP.NETCoreWebAPI3/src/LambdaASP.NETCoreWebAPI3/LambdaASP.NETCoreWebAPI3.csproj",
+  "expectedPackageFiles": [
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.apigatewayevents/2.6.0/amazon.lambda.apigatewayevents.2.6.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.applicationloadbalancerevents/2.1.0/amazon.lambda.applicationloadbalancerevents.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.aspnetcoreserver/8.1.0/amazon.lambda.aspnetcoreserver.8.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.core/2.1.0/amazon.lambda.core.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.logging.aspnetcore/3.1.0/amazon.lambda.logging.aspnetcore.3.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.serialization.systemtextjson/2.3.1/amazon.lambda.serialization.systemtextjson.2.3.1.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.configuration/2.1.0/microsoft.extensions.configuration.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.configuration.abstractions/2.1.0/microsoft.extensions.configuration.abstractions.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.configuration.binder/2.1.0/microsoft.extensions.configuration.binder.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/2.1.0/microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.logging/2.1.0/microsoft.extensions.logging.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.logging.abstractions/2.1.0/microsoft.extensions.logging.abstractions.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.options/2.1.0/microsoft.extensions.options.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.primitives/2.1.0/microsoft.extensions.primitives.2.1.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/system.memory/4.5.0/system.memory.4.5.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.0/system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.netcore.app.crossgen2.osx-arm64/7.0.14/microsoft.netcore.app.crossgen2.osx-arm64.7.0.14.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.14/microsoft.netcore.app.host.osx-arm64.7.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/akhanqi/ahanoff/how-to/openiddict-aws-serverless/src/LambdaEmptyFunction1/src/LambdaEmptyFunction1/LambdaEmptyFunction1.csproj": {}
+  },
+  "projects": {
+    "/Users/akhanqi/ahanoff/how-to/openiddict-aws-serverless/src/LambdaEmptyFunction1/src/LambdaEmptyFunction1/LambdaEmptyFunction1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/akhanqi/ahanoff/how-to/openiddict-aws-serverless/src/LambdaEmptyFunction1/src/LambdaEmptyFunction1/LambdaEmptyFunction1.csproj",
+        "projectName": "LambdaEmptyFunction1",
+        "projectPath": "/Users/akhanqi/ahanoff/how-to/openiddict-aws-serverless/src/LambdaEmptyFunction1/src/LambdaEmptyFunction1/LambdaEmptyFunction1.csproj",
+        "packagesPath": "/Users/akhanqi/.nuget/packages/",
+        "outputPath": "/Users/akhanqi/ahanoff/how-to/openiddict-aws-serverless/src/LambdaEmptyFunction1/src/LambdaEmptyFunction1/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/akhanqi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/qinvent/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Amazon.Lambda.Core": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Amazon.Lambda.Serialization.SystemTextJson": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Crossgen2.osx-arm64",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "Non9/cG47whNdOMrELHM6FRmKClWm06TZKM/ccmAQwDBdLpYVvFmEJcsUBc8iqw9iVsPa9xppvd825/YAPcGjQ==",
+  "success": true,
+  "projectFilePath": "/Users/akhanqi/ahanoff/how-to/openiddict-aws-serverless/src/LambdaEmptyServerless2/src/LambdaEmptyServerless2/LambdaEmptyServerless2.csproj",
+  "expectedPackageFiles": [
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.annotations/1.0.0/amazon.lambda.annotations.1.0.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.apigatewayevents/2.7.0/amazon.lambda.apigatewayevents.2.7.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.core/2.2.0/amazon.lambda.core.2.2.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/amazon.lambda.serialization.systemtextjson/2.4.0/amazon.lambda.serialization.systemtextjson.2.4.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0/microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/akhanqi/.nuget/packages/microsoft.netcore.app.crossgen2.osx-arm64/7.0.14/microsoft.netcore.app.crossgen2.osx-arm64.7.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
