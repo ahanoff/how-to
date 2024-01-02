@@ -1,6 +1,6 @@
 This code example for https://ahanoff.dev/blog/aspnet8-minimal-api-lambda-container-image post
 
-## Prereqisites
+## Prerequisites
 
  - .NET 8 SDK and ASP.NET 8 runtime
  - Docker
