@@ -12,7 +12,7 @@ RUN dotnet build "AspNet8ContainerImage.csproj" --configuration Release --output
 FROM build AS publish
 RUN dotnet publish "AspNet8ContainerImage.csproj" \
     --configuration Release \
-    --runtime linux-arm64 \
+    --runtime linux-x64 \
     --self-contained false \
     --output /app/publish \
     -p:PublishReadyToRun=true  

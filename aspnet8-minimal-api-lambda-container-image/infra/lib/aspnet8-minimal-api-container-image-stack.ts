@@ -37,7 +37,7 @@ export class Aspnet8MinimalApiContainerImageStack extends cdk.Stack {
       }),
       runtime: Runtime.FROM_IMAGE,
       role: lambdaContainerImageRole,
-      architecture: Architecture.ARM_64,
+      architecture: Architecture.X86_64,
       functionName: 'aspnet8-minimal-api-container-image-lambda',
       memorySize: 1024,
       handler: Handler.FROM_IMAGE
