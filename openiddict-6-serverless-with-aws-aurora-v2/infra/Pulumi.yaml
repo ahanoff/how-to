@@ -1,0 +1,10 @@
+name: openiddict6-aurorav2
+description: Infrastructure for running OpenIddict6 lambda with AWS Aurora v2
+runtime:
+  name: nodejs
+  options:
+    packagemanager: npm
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-typescript
