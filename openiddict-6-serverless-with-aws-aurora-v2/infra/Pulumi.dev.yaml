@@ -1,0 +1,5 @@
+encryptionsalt: v1:Yc51ZV4v6yE=:v1:woJS/O/diG791x17:l7cqK/HGBsHv6MOMgc2duaVqg23W8Q==
+config:
+  aws:region: ap-southeast-1
+  openiddict6-aurorav2:db-cluster-master-password:
+    secure: v1:Wn/GS+C6/283B2fQ:b/3Mjw8A/E8Na80ioid8DNcxVavFtBMLkVDc2MPawzFktlQzObsqVUk=

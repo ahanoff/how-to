@@ -1,0 +1,20 @@
+﻿services:
+  api:
+    image: openiddict.serverless
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5085:8080"
+    environment:
+      ConnectionStrings__OpenIddictDbContext: "Host=localhost;Username=openiddict;Password=password;Database=openiddict"
+  db:
+    image: postgres:16.4 # latest currently supported by AWS Aurora v2
+    restart: always
+    shm_size: 128mb # set shared memory limit when using docker-compose
+    environment:
+      POSTGRES_USER: openiddict
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: openiddict
+    ports:
+      - "5432:5432"
