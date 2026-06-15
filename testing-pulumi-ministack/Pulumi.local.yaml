@@ -1,0 +1,22 @@
+config:
+  aws:region: us-east-1
+  aws:accessKey: test
+  aws:secretKey: test
+  aws:s3UsePathStyle: true
+  aws:skipCredentialsValidation: true
+  aws:skipMetadataApiCheck: true
+  aws:skipRequestingAccountId: true
+  aws:endpoints:
+    - s3: http://localhost:4566
+      dynamodb: http://localhost:4566
+      secretsmanager: http://localhost:4566
+      sqs: http://localhost:4566
+      sns: http://localhost:4566
+      lambda: http://localhost:4566
+      iam: http://localhost:4566
+      sts: http://localhost:4566
+      cloudformation: http://localhost:4566
+      route53: http://localhost:4566
+      cloudwatch: http://localhost:4566
+      ssm: http://localhost:4566
+      kms: http://localhost:4566
