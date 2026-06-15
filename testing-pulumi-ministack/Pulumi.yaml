@@ -1,3 +1,0 @@
-name: ministack-pulumi-demo
-description: A Pulumi stack testable locally with MiniStack
-runtime: nodejs

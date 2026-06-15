@@ -1,6 +1,0 @@
-node_modules/
-bin/
-.pulumi-state/
-Pulumi.*.yaml
-!Pulumi.yaml
-!Pulumi.local.yaml
