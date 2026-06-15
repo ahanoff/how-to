@@ -56,7 +56,18 @@ make reset
 | `index.ts` | Infrastructure: native DynamoDB table + custom dynamic resource |
 | `managed-secret.ts` | Custom `pulumi.dynamic.ResourceProvider` for Secrets Manager |
 | `Makefile` | Convenience commands for local testing |
+| `.githooks/pre-push` | Blocks push if `pulumi preview` fails against MiniStack |
 | `.github/workflows/infrastructure-tests.yml` | GitHub Actions CI workflow |
+
+## Pre-push hook
+
+A git hook in `.githooks/pre-push` runs `pulumi preview` against MiniStack before every push. If MiniStack is not running, it skips with a warning. If preview fails (unsupported resource, config error), the push is blocked.
+
+Enable it once after cloning:
+
+```bash
+git config core.hooksPath .githooks
+```
 
 ## The two layers
 

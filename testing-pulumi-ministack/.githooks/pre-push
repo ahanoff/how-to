@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Pre-push hook: runs pulumi preview against MiniStack if it is running.
+# Blocks the push if preview finds unsupported resources or errors.
+# If MiniStack is not running, skips with a warning.
+
+set -euo pipefail
+
+MINISTACK_URL="http://localhost:4566"
+
+# Skip if MiniStack is not running
+if ! curl -sf "${MINISTACK_URL}/_ministack/health" >/dev/null 2>&1; then
+    echo "⏭  MiniStack not running, skipping preview check."
+    echo "   Start it: podman run -p 4566:4566 ministackorg/ministack"
+    exit 0
+fi
+
+echo "▶ Running pulumi preview against MiniStack..."
+
+AWS_ENDPOINT_URL="${MINISTACK_URL}" \
+AWS_ACCESS_KEY_ID=test \
+AWS_SECRET_ACCESS_KEY=test \
+AWS_DEFAULT_REGION=us-east-1 \
+PULUMI_CONFIG_PASSPHRASE=test-passphrase \
+PULUMI_BACKEND_URL=file://./.pulumi-state \
+pulumi preview --diff 2>&1
+
+RESULT=$?
+
+if [ $RESULT -ne 0 ]; then
+    echo ""
+    echo "✗ pulumi preview failed. Push blocked."
+    echo "  A resource may not be supported by MiniStack."
+    echo "  Check coverage: https://ministack.org/docs/services/"
+    exit 1
+fi
+
+echo ""
+echo "✓ pulumi preview passed."
