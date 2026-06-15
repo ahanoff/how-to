@@ -1,0 +1,17 @@
+{
+  "name": "ministack-pulumi-demo",
+  "version": "0.1.0",
+  "description": "Testing Pulumi infrastructure locally with MiniStack",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^7.0.0",
+    "@pulumi/pulumi": "^3.0.0",
+    "@aws-sdk/client-secrets-manager": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
