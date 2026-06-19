@@ -1,0 +1,26 @@
+FROM public.ecr.aws/lambda/dotnet:10 AS base
+
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+ARG TARGETARCH
+WORKDIR /src
+COPY ["AspNet10ContainerImage.csproj", "AspNet10ContainerImage/"]
+RUN dotnet restore "AspNet10ContainerImage/AspNet10ContainerImage.csproj"
+
+WORKDIR "/src/AspNet10ContainerImage"
+COPY . .
+RUN dotnet build "AspNet10ContainerImage.csproj" --configuration Release --output /app/build
+
+FROM build AS publish
+ARG TARGETARCH
+RUN DOTNET_ARCH=$(test "$TARGETARCH" = "arm64" && echo "linux-arm64" || echo "linux-x64") && \
+    dotnet publish "AspNet10ContainerImage.csproj" \
+    --configuration Release \
+    --runtime $DOTNET_ARCH \
+    --self-contained false \
+    --output /app/publish \
+    -p:PublishReadyToRun=true
+
+FROM base AS final
+WORKDIR /var/task
+COPY --from=publish /app/publish .
+CMD ["AspNet10ContainerImage"]
