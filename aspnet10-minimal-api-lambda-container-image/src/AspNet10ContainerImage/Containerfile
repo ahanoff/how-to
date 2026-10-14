@@ -1,0 +1,13 @@
+# The SDK stage runs on the build machine and cross-compiles for TARGETARCH,
+# so an arm64 image builds at native speed on an x86_64 machine.
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+ARG TARGETARCH
+WORKDIR /src
+COPY AspNet10ContainerImage.csproj .
+RUN dotnet restore --arch $TARGETARCH
+COPY . .
+RUN dotnet publish --arch $TARGETARCH --no-restore --configuration Release --output /app/publish
+
+FROM public.ecr.aws/lambda/dotnet:10
+COPY --from=build /app/publish ${LAMBDA_TASK_ROOT}
+CMD ["AspNet10ContainerImage"]
