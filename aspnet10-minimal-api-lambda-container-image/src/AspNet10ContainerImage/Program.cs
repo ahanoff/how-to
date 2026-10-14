@@ -10,7 +10,7 @@ builder.Services.AddAWSLambdaHosting(LambdaEventSource.HttpApi, options =>
     {
         var apiResponse = (APIGatewayHttpApiV2ProxyResponse)lambdaResponse;
         apiResponse.Headers ??= new Dictionary<string, string>();
-        apiResponse.Headers["X-Request-Id"] = context.AwsRequestId;
+        apiResponse.Headers["X-Lambda-Request-Id"] = context.AwsRequestId;
     };
 });
 
