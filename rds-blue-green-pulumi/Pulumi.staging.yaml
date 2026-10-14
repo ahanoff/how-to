@@ -1,0 +1,14 @@
+# Upgraded by the provider: blueGreenUpdate runs create, switchover and delete
+# inside one pulumi up. Take a manual snapshot first; the provider won't.
+config:
+  aws:region: eu-west-1
+  rds-blue-green:identifier: app-staging
+  rds-blue-green:engineVersion: "16.15"
+  rds-blue-green:parameterGroupFamilies:
+    - postgres16
+  rds-blue-green:blueGreenUpdate: true
+  rds-blue-green:deletionProtection: false
+  rds-blue-green:vpcId: vpc-0123456789abcdef0
+  rds-blue-green:subnetIds:
+    - subnet-0123456789abcdef0
+    - subnet-0123456789abcdef1

@@ -1,0 +1,46 @@
+name: rds-blue-green
+description: RDS for PostgreSQL kept ready for Blue/Green major version upgrades
+runtime: bun
+config:
+  identifier:
+    type: string
+    description: RDS instance identifier. A Blue/Green switchover renames the old instance to <identifier>-old1.
+  engineVersion:
+    type: string
+    description: PostgreSQL version, such as 16.15. With blueGreenUpdate off, change it only after a switchover, to the version the new instance already runs.
+  parameterGroupFamilies:
+    type: array
+    items:
+      type: string
+    description: One parameter group per family, all with logical replication on. Must include the family of engineVersion. Keep the old family until <identifier>-old1 is deleted, because that instance still uses it.
+  blueGreenUpdate:
+    type: boolean
+    default: false
+    description: Let the provider run the whole Blue/Green deployment inside pulumi up. It deletes the old instance and its automated backups with no final snapshot, so it can't be combined with deletionProtection.
+  deletionProtection:
+    type: boolean
+    default: true
+  instanceClass:
+    type: string
+    default: db.t4g.micro
+  multiAz:
+    type: boolean
+    default: false
+  allocatedStorage:
+    type: integer
+    default: 20
+  maxAllocatedStorage:
+    type: integer
+    default: 100
+    description: Storage autoscaling ceiling in GiB. Blue/Green creation fails unless it's at least 10% above the allocated storage.
+  backupRetentionPeriod:
+    type: integer
+    default: 7
+    description: Days of automated backups. Blue/Green needs it above 0.
+  vpcId:
+    type: string
+  subnetIds:
+    type: array
+    items:
+      type: string
+    description: Private subnets for the DB subnet group, in at least two Availability Zones.

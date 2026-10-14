@@ -1,0 +1,17 @@
+{
+  "name": "rds-blue-green-pulumi",
+  "description": "RDS for PostgreSQL major version upgrades with Blue/Green deployments and Pulumi",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^7.50.0",
+    "@pulumi/pulumi": "^3.268.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.3",
+    "typescript": "^7.0.2"
+  }
+}
