@@ -29,7 +29,7 @@ The committed stack files hold placeholder network IDs. Replace them before the 
 | Stack | Upgrade path |
 | --- | --- |
 | `staging` | `blueGreenUpdate: true`. The provider creates green, switches over and deletes the old instance inside one `pulumi up`, with no final snapshot and no automated backups kept. Take a manual snapshot first. |
-| `prod` | Blue/Green from the AWS CLI with a check before the switchover, the old instance kept as the rollback, and the stack config following in three commits. |
+| `prod` | Blue/Green through the RDS API, here with the AWS CLI, with a check before the switchover, the old instance kept as the rollback, and the stack config following in three commits. |
 
 The program refuses `blueGreenUpdate` on a stack with `deletionProtection` on.
 
@@ -72,6 +72,8 @@ aws rds create-blue-green-deployment \
 ```
 
 Before the switchover, compare `scripts/row-counts.sql` output from blue and green.
+
+Neither CloudFormation nor the Terraform and Pulumi AWS providers have a resource for the Blue/Green deployment itself, so this step is always RDS API calls: create, describe, switch over, delete. Running them by hand from a terminal is one option. Where production changes have to go through pipelines, approvals and an audit trail, put the same calls into a pipeline: one job per step and a manual approval before the switchover, or an SSM Automation runbook.
 
 **3. After the switchover**, point the state at the new instance, then commit the new version:
 
