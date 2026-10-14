@@ -1,0 +1,18 @@
+{
+  "name": "@ahanoff/cloudflare-zero-trust-ecs",
+  "description": "Cloudflare Zero Trust on ECS in place of an EC2 bastion",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^7.50.0",
+    "@pulumi/cloudflare": "^6.22.1",
+    "@pulumi/pulumi": "^3.268.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.3",
+    "typescript": "^7.0.2"
+  }
+}
