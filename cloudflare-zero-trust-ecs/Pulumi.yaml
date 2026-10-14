@@ -1,0 +1,45 @@
+name: cloudflare-zero-trust-ecs
+description: Cloudflare Zero Trust on ECS in place of an EC2 bastion
+runtime: bun
+config:
+  cloudflareAccountId:
+    type: string
+  vpcId:
+    type: string
+    description: The VPC that the bastion used to give access to. Its CIDR becomes the tunnel route.
+  subnetIds:
+    type: array
+    items:
+      type: string
+    description: Private subnets for the cloudflared task. They need a route to a NAT Gateway for outbound UDP and TCP 7844 and TCP 443.
+  databasePort:
+    type: integer
+    default: 5432
+    description: The one port that allowed users can reach in the VPC.
+  databaseSecurityGroupId:
+    type: string
+    default: ""
+    description: Security group of the database. When set, the stack lets cloudflared in on databasePort, the way the bastion's security group used to be.
+  allowedGroups:
+    type: array
+    items:
+      type: string
+    default: []
+    description: Identity provider groups allowed to reach databasePort. Needs group claims or SCIM from your identity provider.
+  allowedEmails:
+    type: array
+    items:
+      type: string
+    default: []
+    description: Users allowed to reach databasePort, for identity providers that don't send groups.
+  cloudflaredImage:
+    type: string
+    default: cloudflare/cloudflared:2026.10.0
+  manageDeviceSettings:
+    type: boolean
+    default: false
+    description: Turn on the Gateway TCP and UDP proxy and put the default device profile in Include mode with only the VPC CIDR. Both are account-wide, so leave this off if the account already uses the Cloudflare One Client for anything else.
+  privateDomain:
+    type: string
+    default: ""
+    description: A private Route 53 zone, such as internal.example.com, to resolve through the VPC resolver.
