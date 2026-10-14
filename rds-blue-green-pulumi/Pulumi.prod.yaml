@@ -1,0 +1,17 @@
+# Upgraded by hand: Blue/Green from the AWS CLI, then this file follows in
+# three commits. See "Production upgrade" in README.md.
+config:
+  aws:region: eu-west-1
+  rds-blue-green:identifier: app-prod
+  rds-blue-green:engineVersion: "16.15"
+  rds-blue-green:parameterGroupFamilies:
+    - postgres16
+  rds-blue-green:instanceClass: db.m7g.large
+  rds-blue-green:multiAz: true
+  rds-blue-green:allocatedStorage: 100
+  rds-blue-green:maxAllocatedStorage: 500
+  rds-blue-green:backupRetentionPeriod: 14
+  rds-blue-green:vpcId: vpc-0123456789abcdef0
+  rds-blue-green:subnetIds:
+    - subnet-0123456789abcdef0
+    - subnet-0123456789abcdef1
